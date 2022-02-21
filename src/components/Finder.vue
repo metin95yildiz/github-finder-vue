@@ -5,7 +5,7 @@
             Enter a username and find out user information
         </p>
         <form class="search-form">
-            <input type="text" v-model="username" name="username" placeholder="Enter a Github username" />
+            <input type="search" v-model="username" name="username" placeholder="Enter a Github username" />
             <input type="submit" @click.prevent="search" value="Search" />
         </form>
     </div>
