@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #24292f;
+$color: rgb(36, 41, 47);
 $alt-color: rgb(241, 241, 241);
 
 .profile {
