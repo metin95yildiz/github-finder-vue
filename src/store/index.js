@@ -20,7 +20,6 @@ export default createStore({
   },
   getters: {
     getUserProfile(state){
-      console.log(state.userProfile);
       return state.userProfile;
     },
     getUserRepos(state) {
@@ -36,13 +35,14 @@ export default createStore({
       axios.get(baseUrl + username).then(response => {
         commit("setUserProfile", response.data);
       }).catch(error => {
+        commit("setUserProfile", "");
         commit("setUserError", error)
       })
       axios.get(baseUrl + username + "/repos").then(response => {
         const sortedData = Object.values(response.data).sort((prev, next) => {
           return new Date(next.created_at) - new Date(prev.created_at)
         });
-        commit("setUserRepos", sortedData)
+        commit("setUserRepos", sortedData);
       })
     }
   }
