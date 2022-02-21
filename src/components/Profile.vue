@@ -37,7 +37,7 @@
                 </ul>
             </div>
             <div class="latest-repos">
-                <h3>Latest Repos</h3>
+                <h2>Latest Repos</h2>
                 <div class="repos" v-if="getUserProfile.public_repos">
                     <div class="repo-card" v-for="repo in getUserRepos" :key="repo">
                         <div class="repo-name">
@@ -163,8 +163,10 @@ $alt-color: rgb(241, 241, 241);
             .repo-name {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: space-between;
                 margin: 0.5rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
                 .view-link {
                     border: 2px solid $alt-color;
                     height: max-content;
