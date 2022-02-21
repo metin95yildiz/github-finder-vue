@@ -1,15 +1,19 @@
 <template>
+  <h1>Github Finder</h1>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Finder />
+  <Profile />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Finder from "./components/Finder.vue";
+import Profile from "./components/Profile.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Finder,
+    Profile
   }
 }
 </script>
@@ -21,6 +25,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 4.5rem;
 }
 </style>
