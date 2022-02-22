@@ -6,7 +6,8 @@ This is simple Github user finder app. It is searching for a Github user by user
 
 * Vue
 * Vuex
-* axios
+* Axios
+* Sass
 
 ## Project setup
 ```
