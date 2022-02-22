@@ -93,6 +93,7 @@ $alt-color: rgb(241, 241, 241);
         padding: 2rem;
         min-width: max-content;
         width: 40vw;
+        align-self: flex-start;
         .avatar {
             display: flex;
             flex-direction: column;
