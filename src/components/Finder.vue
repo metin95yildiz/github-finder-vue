@@ -55,6 +55,7 @@ $alt-color: rgb(241, 241, 241);
         transition: opacity 0.3s;
         &:disabled {
             opacity: 0.5;
+            cursor: not-allowed;
         }
     }
 }
