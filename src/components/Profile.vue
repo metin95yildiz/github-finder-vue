@@ -77,6 +77,7 @@ export default {
 <style lang="scss" scoped>
 $color: rgb(36, 41, 47);
 $alt-color: rgb(241, 241, 241);
+$error-color: rgb(255, 58, 58);
 
 .profile {
     margin-top: 4rem;
@@ -87,13 +88,13 @@ $alt-color: rgb(241, 241, 241);
     border-radius: 1rem;
     text-align: center;
     align-items: center;
-
     min-width: max-content;
+    width: 98%;
     .user-info {
-        padding: 2rem;
+        padding: 1rem;
         min-width: max-content;
-        width: 40vw;
-        align-self: flex-start;
+        width: 94%;
+        align-self: center;
         .avatar {
             display: flex;
             flex-direction: column;
@@ -142,14 +143,13 @@ $alt-color: rgb(241, 241, 241);
         }
     }
     .latest-repos {
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-        padding: 2rem;
+        padding: 1rem;
         margin: 1rem;
         border: 2px solid $color;
         border-radius: 1rem;
         min-width: max-content;
+        align-self: center;
+        width: 86%;
         .repo-card {
             display: flex;
             flex-direction: column;
@@ -157,7 +157,6 @@ $alt-color: rgb(241, 241, 241);
             color: $alt-color;
             border-radius: 1rem;
             min-width: 21rem;
-            width: 35vw;
             height: 4rem;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
@@ -190,15 +189,21 @@ $alt-color: rgb(241, 241, 241);
         height: 2rem;
     }
 }
-.fade-enter {
+.error {
+    display: inline-block;
+    p {
+        background-color: $error-color;
+        border-radius: 2rem;
+        width: max-content;
+        padding: 0.5rem;
+        justify-self: center;
+    }
+}
+.fade-enter, .fade-leave-to {
     opacity: 0;
 }
-.fade-enter-active{
+.fade-enter-active, .fade-leave-active{
     transition: opacity 1s;
-}
-.fade-leace-active {
-    transition: opacity 1s;
-    opacity: 0;
 }
 @media(min-width: 57rem) {
     .profile {
